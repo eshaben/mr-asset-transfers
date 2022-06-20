@@ -1,0 +1,12 @@
+type Transfer @entity {
+
+  id: ID! # Transaction hash
+
+  assetId: String!
+
+  to: String!
+
+  from: String!
+
+  balance: BigInt!
+}
