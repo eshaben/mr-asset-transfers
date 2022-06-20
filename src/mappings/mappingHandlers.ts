@@ -6,7 +6,7 @@ export async function handleEvent(event: SubstrateEvent): Promise<void> {
     const assetId = event.event.data[0];
     const from = event.event.data[1];
     const to = event.event.data[2];
-    const balance = event.event.data[0];
+    const balance = event.event.data[3];
 
     const transfer = new Transfer(`${event.block.block.header.number.toNumber()}-${event.idx}`);
 
