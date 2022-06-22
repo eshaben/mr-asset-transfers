@@ -20,8 +20,18 @@ dataSources:
     mapping:
       file: ./dist/index.js
       handlers:
-        - handler: handleEvent
+        - handler: handleTransferredEvent
           kind: substrate/EventHandler
           filter:
             module: assets
             method: Transferred
+        - handler: handleIssuedEvent
+          kind: substrate/EventHandler
+          filter:
+            module: assets
+            method: Issued
+        - handler: handleBurnedEvent
+          kind: substrate/EventHandler
+          filter:
+            module: assets
+            method: Burned
