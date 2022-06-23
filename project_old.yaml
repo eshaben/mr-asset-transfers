@@ -1,13 +1,6 @@
-specVersion: 1.0.0
+specVersion: 0.2.0
 name: xc20-data
 version: 1.0.0
-runner:
-  node:
-    name: '@subql/node'
-    version: 1.1.2
-  query:
-    name: '@subql/query'
-    version: 1.1.1
 description: >-
   A basic Frontier EVM example project with an event and call handler. Read more
   about this at https://doc.subquery.network/create/frontier/. This project can
@@ -16,7 +9,7 @@ repository: 'https://github.com/subquery/tutorials-frontier-evm-starter'
 schema:
   file: ./schema.graphql
 network:
-  chainId: '0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b'
+  genesisHash: '0x401a1f9dca3da46f5c4091016c8a2f26dcea05865116b286f60f668207d1474b'
   endpoint: 'wss://moonriver.api.onfinality.io/public-ws'
   dictionary: 'https://api.subquery.network/sq/subquery/moonriver-dictionary'
   chaintypes:
